@@ -46,7 +46,7 @@ public class SocialNetwork {
         }
 
     }
-<<<<<<< HEAD
+
 
     public static void menuPrincipal(User currentUser, SystemSocial systemSocial) {
         Scanner write = new Scanner(System.in);
@@ -117,53 +117,6 @@ public class SocialNetwork {
             }
         } while (option1 != 5);
 
-=======
-    
-    
-    public static void menuPrincipal(){
-        Scanner write = new Scanner (System.in);
-        int option1,option2;
-        System.out.println("Elige una de las siguientes opciones" +
-                           "\n==================================" +
-                           "\n 1. Crear Publicacion" +
-                           "\n 2. Ver seguidores" +
-                           "\n 3. Seguir a un Usuario" +
-                           "\n 4. salir" +
-                           "\n =================================");
-        option1=write.nextInt();
-        
-        switch (option1){
-            case 1:
-                do{
-                System.out.println("¿Que tipo de Publicacion crearas?" +
-                                   "\n 1. Texto" +
-                                   "\n 2. Video" +
-                                   "\n 3. Imagen.");
-                option2=write.nextInt();
-                if (option2==1){
-                    Text text = new Text();
-                    text.createText();
-                    
-                }else if(option2==2){
-                    Video video = new Video();
-                    video.createVideo();
-                }else if (option2==3){
-                    Image image = new Image();
-                    image.createImage();
-                }else                    
-                    System.out.println("Opcion no valida");                                    
-                }while(option2>=4);
-            break;
-            case 2:
-                
-            break;
-            case 3:
-                System.out.println("");
-            break;
-            default:
-                System.out.println("Opcion no valida");           
-        }
->>>>>>> 955c01fafa39a231ed49d6b216d64fa3da43dbe0
     }
 
 }

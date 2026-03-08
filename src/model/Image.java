@@ -16,9 +16,7 @@ public class Image extends Publication {
 
     
     public Image(){}
-    
-<<<<<<< HEAD
-    
+        
     public void createImage(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese la ruta del archivo de imagen:");
@@ -33,12 +31,6 @@ public class Image extends Publication {
         } catch (IOException e) {
             System.out.println("Error al cargar la imagen: " + e.getMessage());
         }
-
-
-=======
-    public void createImage(){
-    
->>>>>>> 955c01fafa39a231ed49d6b216d64fa3da43dbe0
     }
     
     @Override
