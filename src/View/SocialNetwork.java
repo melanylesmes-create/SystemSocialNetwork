@@ -4,7 +4,7 @@ import controller.*;
 import java.util.Scanner;
 import model.*;
 
-//Prueba de actualizacion Mario cars 10.43
+//Prueba de actualizacion Mario cars melany
 
 public class SocialNetwork {
 
@@ -47,7 +47,6 @@ public class SocialNetwork {
         int option1,option2;
         System.out.println("Elige una de las siguientes opciones" +
                            "\n==================================" +
-                           "\n           FEED                   " +
                            "\n 1. Crear Publicacion" +
                            "\n 2. Ver seguidores" +
                            "\n 3. Seguir a un Usuario" +
