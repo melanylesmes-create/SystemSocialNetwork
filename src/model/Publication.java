@@ -6,6 +6,15 @@ public abstract class Publication {
     protected String date;
     protected int numberReaction;
 
+    public Publication(String identifier, String date) {
+        this.identifier = identifier;
+        this.date = date;
+    }
+    
+    public Publication(){}
+    
+    //Metodos Getter y Setter
+    
     public String getIdentifier() {
         return identifier;
     }

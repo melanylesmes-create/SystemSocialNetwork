@@ -33,9 +33,11 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }    
+    }
+
+    //Metodos de la Clase
     public void addPublication(Publication publication){
-        
+        listPublications.add(publication);
     }
     public void followUser(){
     
