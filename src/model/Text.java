@@ -33,7 +33,10 @@ public class Text extends Publication {
     
     @Override
     public String seeContent() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
+        return "Publicación de Texto\n" +
+           "ID: " + identifier + "\n" +
+           "Fecha: " + date + "\n" +
+           "Contenido: " + text + "\n" +
+           "Reacciones: " + numberReaction;
+    }  
 }

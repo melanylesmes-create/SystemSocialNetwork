@@ -34,11 +34,43 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }    
-    public void addPublication(Publication publication){
-        
-    }
+    //public void addPublication(Publication publication){    
+    //}
     public void followUser(){
     
+    }
+
+    public List<User> getListFollowers() {
+        return listFollowers;
+    }
+
+    public void setListFollowers(List<User> listFollowers) {
+        this.listFollowers = listFollowers;
+    }
+
+    public List<User> getListFollowed() {
+        return listFollowed;
+    }
+
+    public void setListFollowed(List<User> listFollowed) {
+        this.listFollowed = listFollowed;
+    }
+
+    public List<Publication> getListPublications() {
+        return listPublications;
+    }
+
+    public void setListPublications(List<Publication> listPublications) {
+        this.listPublications = listPublications;
+    }
+    
+    public void addPublication(Publication publication) {
+    listPublications.add(publication);
+    }
+    
+    public void followUser(User u) {
+    listFollowed.add(u);
+    u.listFollowers.add(this); // opcional: para que el otro sepa que lo siguen
     }
     
     @Override

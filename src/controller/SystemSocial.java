@@ -1,9 +1,12 @@
 
 package controller;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import model.User;
+import java.util.*;
+import model.Publication;
 
 public class SystemSocial {
     private List<User> listUsers = new ArrayList<User>();
@@ -29,9 +32,35 @@ public class SystemSocial {
        listUsers.add(user);      
     }
     
-    public void seeFeed(){
-       
+   
+    public void seeFeed(User user) {
+    List<Publication> feed = new ArrayList<>();
+
+    // Recorremos los usuarios seguidos
+    for (User followed : user.getListFollowed()) {
+        feed.addAll(followed.getListPublications());
     }
+
+    // Ordenamos por fecha (suponiendo formato "dd/MM/yyyy")
+    Collections.sort(feed, new Comparator<Publication>() {
+        @Override
+        public int compare(Publication p1, Publication p2) {
+            try {
+                Date d1 = new SimpleDateFormat("dd/MM/yyyy").parse(p1.getDate());
+                Date d2 = new SimpleDateFormat("dd/MM/yyyy").parse(p2.getDate());
+                return d1.compareTo(d2);
+            } catch (Exception e) {
+                return 0;
+            }
+        }
+    });
+
+    // Mostramos el contenido
+    for (Publication pub : feed) {
+        System.out.println(pub.seeContent());
+        System.out.println("-------------------------");
+    }
+}
     
     public void giveLike(){
     
