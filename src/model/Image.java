@@ -17,6 +17,7 @@ public class Image extends Publication {
     
     public Image(){}
     
+<<<<<<< HEAD
     
     public void createImage(){
         Scanner sc = new Scanner(System.in);
@@ -34,6 +35,10 @@ public class Image extends Publication {
         }
 
 
+=======
+    public void createImage(){
+    
+>>>>>>> 955c01fafa39a231ed49d6b216d64fa3da43dbe0
     }
     
     @Override

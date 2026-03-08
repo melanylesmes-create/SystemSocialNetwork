@@ -3,8 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/ASUS/Desktop/Ensayo/Nueva%20carpeta/SystemSocialNetwork/src/controller/Login.java</file>
             <file>file:/C:/Users/ASUS/Desktop/Ensayo/Nueva%20carpeta/SystemSocialNetwork/src/View/SocialNetwork.java</file>
+=======
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/SocialNetwork/src/controller/Login.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/SocialNetwork/src/model/User.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/SocialNetwork/src/model/Video.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/SocialNetwork/src/model/Image.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/SocialNetwork/src/controller/SystemSocial.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/SocialNetwork/src/model/Publication.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/SocialNetwork/src/model/Text.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/SocialNetwork/src/controller/Logout.java</file>
+            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/SocialNetwork/src/View/SocialNetwork.java</file>
+>>>>>>> 955c01fafa39a231ed49d6b216d64fa3da43dbe0
         </group>
     </open-files>
 </project-private>
