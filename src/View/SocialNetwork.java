@@ -56,7 +56,7 @@ public class SocialNetwork {
                 System.out.println("¿Que tipo de Publicacion crearas?" +
                                    "\n 1. Texto" +
                                    "\n 2. Video" +
-                                   "\n 3. Imagen");
+                                   "\n 3. Imagen.");
                 option2=write.nextInt();
                 if (option2==1){
                     Text text = new Text();
