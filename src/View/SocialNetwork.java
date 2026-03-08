@@ -91,7 +91,7 @@ public class SocialNetwork {
                     currentUser.seeFollowers();
                     break;
                 case 3:
-                    FollowService.followUser(currentUser, systemSocial);
+                    User.followUser(currentUser, systemSocial);
                     break;
                 case 4:
                     systemSocial.seeFeed(currentUser);
