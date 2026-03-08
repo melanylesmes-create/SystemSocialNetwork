@@ -91,17 +91,7 @@ public class SocialNetwork {
                     currentUser.seeFollowers();
                     break;
                 case 3:
-                    System.out.println("Ingrese el ID del usuario a seguir:");
-                    String idFollow = write.next();
-                    for (User user : systemSocial.getListUsers()) {
-                        if (user.getIdentifier().equals(idFollow)) {
-                            currentUser.followUser(user);
-                            System.out.println("Ahora sigues a " + user.getName());
-                        }
-                        
-                        
-                        
-                    }
+                    FollowService.followUser(currentUser, systemSocial);
                     break;
                 case 4:
                     systemSocial.seeFeed(currentUser);
