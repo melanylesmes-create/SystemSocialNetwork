@@ -16,7 +16,8 @@ public class Image extends Publication {
 
     
     public Image(){}
-        
+    
+    //Metodos propios de Imagen
     public void createImage(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese la ruta del archivo de imagen:");

@@ -31,6 +31,7 @@ public class Text extends Publication {
         this.inputText = inputText;
     }
     
+    //Metodos propios de la clase
     public void createText(){
         Scanner write = new Scanner(System.in);
         System.out.println("Escriba una identificacion de su publicacion");

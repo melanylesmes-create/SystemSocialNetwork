@@ -4,13 +4,13 @@ import controller.*;
 import java.util.Scanner;
 import model.*;
 import controller.*;
-
-//Prueba de actualizacion Mario cars melany liney 
+ 
 public class SocialNetwork {
 
     public static void main(String[] args) {
         Scanner write = new Scanner(System.in);
         SystemSocial systemSocial = new SystemSocial();
+        Logout logout = new Logout();
         User user1 = new User("123", "Eliana");
         User user2 = new User("234", "Santiago");
         User user3 = new User("345", "Javier");
@@ -37,7 +37,6 @@ public class SocialNetwork {
                 }
 
                 break;
-
             case 2:
 
                 break;
