@@ -7,8 +7,7 @@ import java.util.List;
 public class User {
     private String identifier;
     private String name;
-    private List <User> listFollowers =new ArrayList<User>();
-    private List <User> listFollowed =new ArrayList<User>();
+    
     private List <Publication> listPublications =new ArrayList<Publication>();
     private List<User> followers = new ArrayList<>();
     private List<User> following = new ArrayList<>();
@@ -25,6 +24,25 @@ public class User {
     public String getIdentifier() {
         return identifier;
     }
+
+    public List<User> getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(List<User> followers) {
+        this.followers = followers;
+    }
+
+    public List<User> getFollowing() {
+        return following;
+    }
+
+    public void setFollowing(List<User> following) {
+        this.following = following;
+    }
+    
+    
+    
 
     public void setIdentifier(String identifier) {
         this.identifier = identifier;
@@ -43,21 +61,6 @@ public class User {
     
     }
 
-    public List<User> getListFollowers() {
-        return listFollowers;
-    }
-
-    public void setListFollowers(List<User> listFollowers) {
-        this.listFollowers = listFollowers;
-    }
-
-    public List<User> getListFollowed() {
-        return listFollowed;
-    }
-
-    public void setListFollowed(List<User> listFollowed) {
-        this.listFollowed = listFollowed;
-    }
 
     public List<Publication> getListPublications() {
         return listPublications;
@@ -110,6 +113,18 @@ public class User {
         }
     }
 
+    public Publication findPublicationById(String id) {
+    for (Publication p : listPublications) {
+        if (p.getIdentifier().equals(id)) {
+            return p;
+        }
+    }
+    return null;
+}
+    
+    public List<Publication> getPublications() {
+    return listPublications;
+}
     
     @Override
     public String toString(){

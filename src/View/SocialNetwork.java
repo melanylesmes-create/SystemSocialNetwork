@@ -4,7 +4,7 @@ import controller.*;
 import java.util.Scanner;
 import model.*;
 import controller.*;
- 
+
 public class SocialNetwork {
 
     public static void main(String[] args) {
@@ -37,14 +37,12 @@ public class SocialNetwork {
                 }
                 break;
             case 2:
-                    logout.logout(systemSocial);
+                logout.logout(systemSocial);
                 break;
             default:
                 System.out.println("Opcion no valida");
         }
     }
-
-
 
     public static void menuPrincipal(User currentUser, SystemSocial systemSocial, Logout logout) {
 
@@ -60,7 +58,8 @@ public class SocialNetwork {
                     + "\n 4. Ver feed"
                     + "\n 5. Cambiar de usuario"
                     + "\n 6. siguiendo"
-                    + "\n 7. Salir"
+                    + "\n 7. Reaccionar a una publicacion"
+                    + "\n 8. Salir"
                     + "\n =================================");
             option1 = write.nextInt();
 
@@ -105,23 +104,29 @@ public class SocialNetwork {
                     systemSocial.seeFeed(currentUser);
                     break;
                 case 5:
-                    User nuevoUsuario = Login.iniciarSesion(systemSocial);
-                    if (nuevoUsuario != null) {
-                        systemSocial.setCurentUser(nuevoUsuario);
+                    User neUser = Login.iniciarSesion(systemSocial);
+                    if (neUser != null) {
+                        systemSocial.setCurentUser(neUser);
                         // Aquí volvemos a mostrar el menú con el nuevo usuario
-                        menuPrincipal(systemSocial.getCurentUser(), systemSocial,logout);
+                        menuPrincipal(systemSocial.getCurentUser(), systemSocial, logout);
                         return; // importante para que no se quede en el bucle anterior
 
                     }
                     break;
                 case 6:
                     currentUser.seeFollowing();
-                break;
-                case 7: 
+                    break;
+                case 7:
+                    System.out.println("Ingrese el ID de la publicación a reaccionar:");
+                    String idPub = write.next();
+                    systemSocial.reactToPublication(idPub);
+
+                    break;
+                case 8:
                     logout.logout(systemSocial);
                     break;
             }
-        } while (option1 != 7);
+        } while (option1 != 8);
 
     }
 

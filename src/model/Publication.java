@@ -41,5 +41,16 @@ public abstract class Publication {
         return 0;
     }
     
+    // Método para reaccionar
+    public void react() {
+        numberReaction++;
+    }
+
+    // Método para ver las reacciones
+    public void seeReactions() {
+        System.out.println("Reacciones: " + numberReaction);
+    }
+
+    
     public abstract String seeContent();
 }

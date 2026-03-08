@@ -3,7 +3,7 @@ import java.util.Scanner;
 import model.*;
 
 public class FollowService {
-    public static void seguirUsuario(User currentUser, SystemSocial systemSocial) {
+    public static void followUser (User currentUser, SystemSocial systemSocial) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese el ID del usuario a seguir:");
         String idFollow = sc.next();
