@@ -107,7 +107,7 @@ public class SocialNetwork {
                     if (nuevoUsuario != null) {
                         systemSocial.setCurentUser(nuevoUsuario);
                         // Aquí volvemos a mostrar el menú con el nuevo usuario
-                        menuPrincipal(systemSocial.getCurentUser(), systemSocial);
+                        menuPrincipal(systemSocial.getCurentUser(), systemSocial,logout);
                         return; // importante para que no se quede en el bucle anterior
 
                     }
