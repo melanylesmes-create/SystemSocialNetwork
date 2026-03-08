@@ -6,7 +6,7 @@ public class Video extends Publication {
     
     public Video(){}
     public void createVideo(){
-    
+        
     }
     
     @Override

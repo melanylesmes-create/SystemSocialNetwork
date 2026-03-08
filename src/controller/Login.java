@@ -1,28 +1,36 @@
-
 package controller;
+
 import java.util.Scanner;
 import model.*;
 
 public class Login {
-  
-    public SystemSocial validateUser(String indentifier){
+
+    public SystemSocial validateUser(String indentifier) {
         return null;
     }
+
     public static User iniciarSesion(SystemSocial systemSocial) {
         Scanner write = new Scanner(System.in);
+        User loggedUser = null;
 
-        System.out.println("Ingrese su ID de usuario:");
-        String idLogin = write.next();
+        while (loggedUser == null) {
 
-        for (User u : systemSocial.getListUsers()) {
-            if (u.getIdentifier().equals(idLogin)) {
-                System.out.println("Has iniciado sesión como: " + u.getName());
-                return u;
+            System.out.println("Ingrese su ID de usuario:");
+            String idLogin = write.next();
+
+            for (User u : systemSocial.getListUsers()) {
+                if (u.getIdentifier().equals(idLogin)) {
+                    System.out.println("Has iniciado sesión como: " + u.getName());
+                    return u;
+                }
+            }
+
+            if (loggedUser == null) {
+                System.out.println("Usuario no encontrado. Intente nuevamente");
             }
         }
 
-        System.out.println("Usuario no encontrado.");
-        return null;
+        return loggedUser;
     }
 
 }

@@ -47,7 +47,6 @@ public class SocialNetwork {
 
     }
 
-
     public static void menuPrincipal(User currentUser, SystemSocial systemSocial) {
         Scanner write = new Scanner(System.in);
         int option1;
@@ -107,8 +106,11 @@ public class SocialNetwork {
                 case 5:
                     User nuevoUsuario = Login.iniciarSesion(systemSocial);
                     if (nuevoUsuario != null) {
-                        currentUser = nuevoUsuario;
                         systemSocial.setCurentUser(nuevoUsuario);
+                        // Aquí volvemos a mostrar el menú con el nuevo usuario
+                        menuPrincipal(systemSocial.getCurentUser(), systemSocial);
+                        return; // importante para que no se quede en el bucle anterior
+
                     }
                     break;
 
