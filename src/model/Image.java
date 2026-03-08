@@ -5,7 +5,9 @@ public class Image extends Publication {
     private String resolution;
     
     public Image(){}
-    public void createImage(){}
+    public void createImage(){
+    
+    }
     
     @Override
     public String seeContent() {

@@ -9,6 +9,23 @@ public class Text extends Publication {
     
     public Text(){}
     
+    //Metodos Getter y Setter
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getInputText() {
+        return inputText;
+    }
+
+    public void setInputText(String inputText) {
+        this.inputText = inputText;
+    }
+    
     public void createText(){
         Scanner write = new Scanner(System.in);
         System.out.println("Escriba una identificacion de su publicacion");
@@ -21,14 +38,13 @@ public class Text extends Publication {
         validateTextLength();
     }
     
-    public String validateTextLength(){
+    public void validateTextLength(){
         if(inputText.length()<=500){
             text=inputText;
         }else if(inputText.length()>500){
             System.out.println("Maximo 500 caracteres");
             createText();
         }
-     return text;
     }
     
     @Override
