@@ -3,6 +3,9 @@ package View;
 import controller.*;
 import java.util.Scanner;
 import model.*;
+
+//Prueba de actualizacion Mario cars 10.43
+
 public class SocialNetwork {
 
     public static void main(String[] args) {
@@ -19,6 +22,7 @@ public class SocialNetwork {
         int option;
         System.out.println("Bienvenido a Social Network" + 
                           "\n =========================" +
+                          "\n       MENÚ INICIAL       " +
                           "\n 1. Entrar " +
                           "\n 2. Salir  " +
                           "\n =========================");
@@ -43,6 +47,7 @@ public class SocialNetwork {
         int option1,option2;
         System.out.println("Elige una de las siguientes opciones" +
                            "\n==================================" +
+                           "\n           FEED                   " +
                            "\n 1. Crear Publicacion" +
                            "\n 2. Ver seguidores" +
                            "\n 3. Seguir a un Usuario" +
