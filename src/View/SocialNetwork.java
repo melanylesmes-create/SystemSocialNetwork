@@ -59,7 +59,8 @@ public class SocialNetwork {
                     + "\n 3. Seguir a un usuario"
                     + "\n 4. Ver feed"
                     + "\n 5. Cambiar de usuario"
-                    + "\n 6. Salir"
+                    + "\n 6. siguiendo"
+                    + "\n 7. Salir"
                     + "\n =================================");
             option1 = write.nextInt();
 
@@ -88,6 +89,7 @@ public class SocialNetwork {
                     }
                     break;
                 case 2:
+                    currentUser.seeFollowers();
                     break;
                 case 3:
                     System.out.println("Ingrese el ID del usuario a seguir:");
@@ -113,10 +115,13 @@ public class SocialNetwork {
                     }
                     break;
                 case 6:
-                    logout.logout(systemSocial);
+                    currentUser.seeFollowing();
                 break;
+                case 7: 
+                    logout.logout(systemSocial);
+                    break;
             }
-        } while (option1 != 6);
+        } while (option1 != 7);
 
     }
 

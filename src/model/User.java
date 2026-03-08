@@ -10,6 +10,9 @@ public class User {
     private List <User> listFollowers =new ArrayList<User>();
     private List <User> listFollowed =new ArrayList<User>();
     private List <Publication> listPublications =new ArrayList<Publication>();
+    private List<User> followers = new ArrayList<>();
+    private List<User> following = new ArrayList<>();
+
 
     public User(){}
     
@@ -68,10 +71,45 @@ public class User {
         listPublications.add(publication);
     }
     
-    public void followUser(User u) {
-        listFollowed.add(u);
-        u.listFollowers.add(this); // opcional: para que el otro sepa que lo siguen
+    // Método para seguir a otro usuario
+    public void followUser(User userToFollow) {
+        if(!following.contains(userToFollow)){
+        following.add(userToFollow);
+        userToFollow.addFollower(this);
+        }
     }
+    
+    // Método para agregar un seguidor
+    private void addFollower(User follower) {
+        if (!followers.contains(follower)) {
+            followers.add(follower);
+        }
+    }
+
+    // Ver seguidores
+    public void seeFollowers() {
+        System.out.println("Tus seguidores:");
+        if (followers.isEmpty()) {
+            System.out.println("No tienes seguidores.");
+        } else {
+            for (User u : followers) {
+                System.out.println("- " + u.getName());
+            }
+        }
+    }
+
+    // Ver seguidos
+    public void seeFollowing() {
+        System.out.println("Usuarios que sigues:");
+        if (following.isEmpty()) {
+            System.out.println("No sigues a nadie.");
+        } else {
+            for (User u : following) {
+                System.out.println("- " + u.getName());
+            }
+        }
+    }
+
     
     @Override
     public String toString(){
