@@ -33,21 +33,19 @@ public class SocialNetwork {
                 User loggedUser = Login.iniciarSesion(systemSocial);
                 if (loggedUser != null) {
                     systemSocial.setCurentUser(loggedUser);
-                    menuPrincipal(systemSocial.getCurentUser(), systemSocial);
+                    menuPrincipal(systemSocial.getCurentUser(), systemSocial, logout);
                 }
-
                 break;
             case 2:
-
+                    logout.logout(systemSocial);
                 break;
             default:
                 System.out.println("Opcion no valida");
         }
-
     }
 
 
-    public static void menuPrincipal(User currentUser, SystemSocial systemSocial) {
+    public static void menuPrincipal(User currentUser, SystemSocial systemSocial, Logout logout) {
         Scanner write = new Scanner(System.in);
         int option1;
 
@@ -98,7 +96,6 @@ public class SocialNetwork {
                             System.out.println("Ahora sigues a " + user.getName());
                         }
                     }
-
                     break;
                 case 4:
                     systemSocial.seeFeed(currentUser);
@@ -110,11 +107,11 @@ public class SocialNetwork {
                         systemSocial.setCurentUser(nuevoUsuario);
                     }
                     break;
-
-                default:
-                    System.out.println("Saliste del sistema");
+                case 6:
+                    logout.logout(systemSocial);
+                break;
             }
-        } while (option1 != 5);
+        } while (option1 != 6);
 
     }
 
