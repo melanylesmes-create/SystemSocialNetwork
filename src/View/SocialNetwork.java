@@ -65,6 +65,7 @@ public class SocialNetwork {
                 if (option2==1){
                     Text text = new Text();
                     text.createText();
+                    
                 }else if(option2==2){
                     Video video = new Video();
                     video.createVideo();

@@ -8,6 +8,11 @@ public class Text extends Publication {
     private String inputText;
     
     public Text(){}
+
+    public Text(String inputText, String identifier, String date) {
+        super(identifier, date);
+        this.inputText = inputText;
+    }
     
     //Metodos Getter y Setter
     public String getText() {
