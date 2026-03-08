@@ -4,13 +4,13 @@ import controller.*;
 import java.util.Scanner;
 import model.*;
 import controller.*;
-
-//Prueba de actualizacion Mario cars melany liney 
+ 
 public class SocialNetwork {
 
     public static void main(String[] args) {
         Scanner write = new Scanner(System.in);
         SystemSocial systemSocial = new SystemSocial();
+        Logout logout = new Logout();
         User user1 = new User("123", "Eliana");
         User user2 = new User("234", "Santiago");
         User user3 = new User("345", "Javier");
@@ -33,21 +33,21 @@ public class SocialNetwork {
                 User loggedUser = Login.iniciarSesion(systemSocial);
                 if (loggedUser != null) {
                     systemSocial.setCurentUser(loggedUser);
-                    menuPrincipal(systemSocial.getCurentUser(), systemSocial);
+                    menuPrincipal(systemSocial.getCurentUser(), systemSocial, logout);
                 }
-
                 break;
-
             case 2:
-
+                    logout.logout(systemSocial);
                 break;
             default:
                 System.out.println("Opcion no valida");
         }
-
     }
 
-    public static void menuPrincipal(User currentUser, SystemSocial systemSocial) {
+
+
+    public static void menuPrincipal(User currentUser, SystemSocial systemSocial, Logout logout) {
+
         Scanner write = new Scanner(System.in);
         int option1;
 
@@ -98,7 +98,6 @@ public class SocialNetwork {
                             System.out.println("Ahora sigues a " + user.getName());
                         }
                     }
-
                     break;
                 case 4:
                     systemSocial.seeFeed(currentUser);
@@ -113,11 +112,11 @@ public class SocialNetwork {
 
                     }
                     break;
-
-                default:
-                    System.out.println("Saliste del sistema");
+                case 6:
+                    logout.logout(systemSocial);
+                break;
             }
-        } while (option1 != 5);
+        } while (option1 != 6);
 
     }
 

@@ -12,10 +12,13 @@ public class Image extends Publication {
     private int height;
     private String filePath;
 
-    public Image() {
-    }
 
-    public void createImage() {
+    
+    public Image(){}
+    
+    //Metodos propios de Imagen
+    public void createImage(){
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Escriba una identificacion de su publicacion");
         identifier = sc.nextLine();
