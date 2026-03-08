@@ -4,7 +4,7 @@ import controller.*;
 import java.util.Scanner;
 import model.*;
 import controller.*;
-
+//fggfggnxjudbhsi 
 public class SocialNetwork {
 
     public static void main(String[] args) {
@@ -98,6 +98,9 @@ public class SocialNetwork {
                             currentUser.followUser(user);
                             System.out.println("Ahora sigues a " + user.getName());
                         }
+                        
+                        
+                        
                     }
                     break;
                 case 4:
