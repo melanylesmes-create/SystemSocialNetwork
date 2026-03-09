@@ -74,9 +74,9 @@ public class SystemSocial {
         Publication pub = findPublicationById(idPub);
         if (pub != null) {
             pub.react();
-            System.out.println("Has reaccionado a la publicación " + idPub);
+            System.out.println("You have reacted to the post" + idPub);
         } else {
-            System.out.println("Publicación no encontrada");
+            System.out.println("publication not found");
         }
     }
 }

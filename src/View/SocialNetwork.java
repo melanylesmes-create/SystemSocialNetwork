@@ -53,7 +53,7 @@ public class SocialNetwork {
         do {
             System.out.println("\n--------------------------"
                     +"         Chose one option           n"
-                    + "\n=================================="
+                    + "\n==================================" 
                     + "\n 1. Create Publication"
                     + "\n 2. View followers"
                     + "\n 3. Follow a user"
