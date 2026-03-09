@@ -22,9 +22,10 @@ public class Image extends Publication {
         Scanner sc = new Scanner(System.in);
         System.out.println("Escriba una identificacion de su publicacion");
         identifier = sc.nextLine();
-        System.out.println("Escriba fecha de la siguiente manera: "
-                + "\nDía/Mes/año");
+        
+        System.out.println("Escriba fecha de la siguiente manera: " + "\nDía/Mes/año");
         date = sc.nextLine();
+        
         System.out.println("Ingrese la ruta del archivo de imagen:");
         filePath = sc.next();
 

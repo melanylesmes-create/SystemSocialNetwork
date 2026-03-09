@@ -6,7 +6,6 @@ import model.*;
 import controller.*;
 //fggfggnxjudbhsi 
 public class SocialNetwork {
-
     public static void main(String[] args) {
         Scanner write = new Scanner(System.in);
         SystemSocial systemSocial = new SystemSocial();
@@ -27,7 +26,6 @@ public class SocialNetwork {
                 + "\n 2. Salir  "
                 + "\n =========================");
         option = write.nextInt();
-
         switch (option) {
             case 1:
                 User loggedUser = Login.iniciarSesion(systemSocial);
@@ -44,11 +42,14 @@ public class SocialNetwork {
         }
     }
 
+    
+   
+    
+    
     public static void menuPrincipal(User currentUser, SystemSocial systemSocial, Logout logout) {
 
         Scanner write = new Scanner(System.in);
         int option1;
-
         do {
             System.out.println("Elige una de las siguientes opciones"
                     + "\n=================================="
@@ -71,6 +72,7 @@ public class SocialNetwork {
                             + "\n 2. Video"
                             + "\n 3. Imagen.");
                     int option2 = write.nextInt();
+                    
                     if (option2 == 1) {
                         Text text = new Text();
                         text.createText();
@@ -87,15 +89,19 @@ public class SocialNetwork {
                         System.out.println("Opcion no valida");
                     }
                     break;
+                    
                 case 2:
                     currentUser.seeFollowers();
                     break;
+                    
                 case 3:
                     User.followUser(currentUser, systemSocial);
                     break;
+                    
                 case 4:
                     systemSocial.seeFeed(currentUser);
                     break;
+                    
                 case 5:
                     User neUser = Login.iniciarSesion(systemSocial);
                     if (neUser != null) {
@@ -103,24 +109,23 @@ public class SocialNetwork {
                         // Aquí volvemos a mostrar el menú con el nuevo usuario
                         menuPrincipal(systemSocial.getCurentUser(), systemSocial, logout);
                         return; // importante para que no se quede en el bucle anterior
-
                     }
                     break;
+                    
                 case 6:
                     currentUser.seeFollowing();
                     break;
+                    
                 case 7:
                     System.out.println("Ingrese el ID de la publicación a reaccionar:");
                     String idPub = write.next();
                     systemSocial.reactToPublication(idPub);
-
                     break;
+                    
                 case 8:
                     logout.logout(systemSocial);
                     break;
             }
         } while (option1 != 8);
-
     }
-
 }

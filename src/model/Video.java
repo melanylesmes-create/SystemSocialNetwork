@@ -11,21 +11,26 @@ import java.util.Scanner;
 import javax.imageio.ImageIO;
 
 public class Video extends Publication {
+    
     private int duration;
     private String filePath;
     
     public Video(){}
+    
     public void createVideo(){
         Scanner write = new Scanner (System.in);
         System.out.println("Escriba una identificacion de su publicacion");
         identifier=write.nextLine();
-         System.out.println("Escriba fecha de la siguiente manera: "
-                            + "\nDía/Mes/año");
+        
+        System.out.println("Escriba fecha de la siguiente manera: " + "\nDía/Mes/año");
         date=write.nextLine();
+        
         System.out.println("Ingrese la ruta del archivo del video:");
         filePath=write.nextLine();
         
-        File file = new File(filePath);
+        //File representa el archivo del Sistema 
+        File file = new File(filePath); 
+        
         if(file.exists()) {
             duration= (int) getVideoDuration(filePath);
             System.out.println("Duracion del video: " + duration + " segundos ");
@@ -34,16 +39,17 @@ public class Video extends Publication {
     }
     
     //Metodo con isoparser para duración de video solo con MP4 funciona!
+    //Metodo incluye aspectjrt -1.9.19 para que funcione
     public double getVideoDuration(String filePath){
         try{
-
+            //Propio del Isoparser para leer el MP4
             IsoFile isoFile = new IsoFile(filePath);
+            //Busca donde se encuentra la duracion
             MovieHeaderBox mvhd = Path.getPath(isoFile, "moov/mvhd");
             double durationVideo = (double) mvhd.getDuration() / mvhd.getTimescale();
             isoFile.close();
             return durationVideo;
         }catch(Exception e){
-
             System.out.println("Error al leer la duración del video");
             return 0;
         }

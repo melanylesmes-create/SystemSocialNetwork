@@ -14,7 +14,6 @@ public class User {
     private List<User> followers = new ArrayList<>();
     private List<User> following = new ArrayList<>();
 
-
     public User(){}
     
     public User(String identifier, String name) {
@@ -42,10 +41,7 @@ public class User {
     public void setFollowing(List<User> following) {
         this.following = following;
     }
-    
-    
-    
-
+            
     public void setIdentifier(String identifier) {
         this.identifier = identifier;
     }
@@ -57,12 +53,6 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }    
-
-    //Metodos de la Clase
-    public void followUser(){
-    
-    }
-
 
     public List<Publication> getListPublications() {
         return listPublications;

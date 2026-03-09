@@ -31,9 +31,6 @@ public abstract class Publication {
         this.date = date;
     }
     
-    public int giveNumberReaction(){
-        return 0;
-    }
     public int getNumberReaction() {
         return 0;
     }
@@ -50,7 +47,6 @@ public abstract class Publication {
     public void seeReactions() {
         System.out.println("Reacciones: " + numberReaction);
     }
-
     
     public abstract String seeContent();
 }
