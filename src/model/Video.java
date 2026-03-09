@@ -12,7 +12,7 @@ import javax.imageio.ImageIO;
 
 public class Video extends Publication {
     
-    private int duration;
+    private double duration;
     private String filePath;
     
     public Video(){}
@@ -32,8 +32,8 @@ public class Video extends Publication {
         File file = new File(filePath); 
         
         if(file.exists()) {
-            duration= (int) getVideoDuration(filePath);
-            System.out.println("Duracion del video: " + duration + " segundos ");
+            duration= (double) getVideoDuration(filePath);
+            System.out.println("Duracion del video: " + duration + " minutos con segundos ");
         }else 
             System.out.println("No se encontro el archivo :D");
     }
@@ -48,7 +48,7 @@ public class Video extends Publication {
             MovieHeaderBox mvhd = Path.getPath(isoFile, "moov/mvhd");
             double durationVideo = (double) mvhd.getDuration() / mvhd.getTimescale();
             isoFile.close();
-            return durationVideo;
+            return Math.round((durationVideo / 60.0) * 100.0) / 100.0;
         }catch(Exception e){
             System.out.println("Error al leer la duración del video");
             return 0;
