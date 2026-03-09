@@ -120,7 +120,7 @@ public class User {
     
     public static void followUser (User currentUser, SystemSocial systemSocial) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese el ID del usuario a seguir:");
+        System.out.println("Enter the ID of the user to follow:");
         String idFollow = sc.next();
 
         User userToFollow = null;
@@ -133,9 +133,9 @@ public class User {
 
         if (userToFollow != null) {
             currentUser.followUser(userToFollow);
-            System.out.println("Ahora sigues a " + userToFollow.getName());
+            System.out.println("Now you follow: " + userToFollow.getName());
         } else {
-            System.out.println("Usuario no encontrado.");
+            System.out.println("User not found.");
         }
     }
     @Override
