@@ -19,7 +19,7 @@ public class SocialNetwork {
         systemSocial.addListUser(user3);
 
         int option;
-        System.out.println("Bienvenido a Social Network"
+        System.out.println("Welcom to Social Network"
                 + "\n ========================="
                 + "\n          MAIN MENÚ       "
                 + "\n 1. Enter "

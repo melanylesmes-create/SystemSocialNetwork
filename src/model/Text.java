@@ -48,7 +48,7 @@ public class Text extends Publication {
         if(inputText.length()<=500){
             text=inputText;
         }else if(inputText.length()>500){
-            System.out.println("Maximo 500 caracteres");
+            System.out.println("Only 500 characteres");
             createText();
         }
     }
