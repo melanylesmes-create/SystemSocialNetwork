@@ -28,7 +28,7 @@ public class SocialNetwork {
         option = write.nextInt();
         switch (option) {
             case 1:
-                User loggedUser = Login.iniciarSesion(systemSocial);
+                User loggedUser = Login.login(systemSocial);
                 if (loggedUser != null) {
                     systemSocial.setCurentUser(loggedUser);
                     menuPrincipal(systemSocial.getCurentUser(), systemSocial, logout);
@@ -51,7 +51,8 @@ public class SocialNetwork {
         Scanner write = new Scanner(System.in);
         int option1;
         do {
-            System.out.println("Elige una de las siguientes opciones"
+            System.out.println("\n--------------------------"
+                    +"Elige una de las siguientes opciones"
                     + "\n=================================="
                     + "\n 1. Crear Publicacion"
                     + "\n 2. Ver seguidores"
@@ -103,7 +104,7 @@ public class SocialNetwork {
                     break;
                     
                 case 5:
-                    User neUser = Login.iniciarSesion(systemSocial);
+                    User neUser = Login.login(systemSocial);
                     if (neUser != null) {
                         systemSocial.setCurentUser(neUser);
                         // Aquí volvemos a mostrar el menú con el nuevo usuario

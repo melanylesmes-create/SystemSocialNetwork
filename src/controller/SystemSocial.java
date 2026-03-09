@@ -10,7 +10,7 @@ import model.Publication;
 public class SystemSocial {
 
     private List<User> listUsers = new ArrayList<User>();
-    private User curentUser;
+    private User currentUser;
 
     public List<User> getListUsers() {
         return listUsers;
@@ -21,11 +21,11 @@ public class SystemSocial {
     }
 
     public User getCurentUser() {
-        return curentUser;
+        return currentUser;
     }
 
     public void setCurentUser(User curentUser) {
-        this.curentUser = curentUser;
+        this.currentUser = curentUser;
     }
 
     public void addListUser(User user) {
@@ -53,7 +53,6 @@ public class SystemSocial {
                 }
             }
         });
-
         // Mostramos el contenido
         for (Publication pub : feed) {
             System.out.println(pub.seeContent());
@@ -79,9 +78,5 @@ public class SystemSocial {
         } else {
             System.out.println("Publicación no encontrada");
         }
-    }
-
-    public void giveLike() {
-
     }
 }

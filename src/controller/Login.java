@@ -9,7 +9,7 @@ public class Login {
         return null;
     }
 
-    public static User iniciarSesion(SystemSocial systemSocial) {
+    public static User login(SystemSocial systemSocial) {
         Scanner write = new Scanner(System.in);
         User loggedUser = null;
 
@@ -24,7 +24,6 @@ public class Login {
                     return u;
                 }
             }
-
             if (loggedUser == null) {
                 System.out.println("Usuario no encontrado. Intente nuevamente");
             }
