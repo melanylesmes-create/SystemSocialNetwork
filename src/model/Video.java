@@ -25,7 +25,7 @@ public class Video extends Publication {
         System.out.println("Escriba fecha de la siguiente manera: " + "\nDía/Mes/año");
         date=write.nextLine();
         
-        System.out.println("Ingrese la ruta del archivo del video:");
+        System.out.println("*Recomendacion: los slash deben ir / " + "\nIngrese la ruta del archivo del video:");
         filePath=write.nextLine();
         
         //File representa el archivo del Sistema 
