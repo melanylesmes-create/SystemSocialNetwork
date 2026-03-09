@@ -21,9 +21,9 @@ public class SocialNetwork {
         int option;
         System.out.println("Bienvenido a Social Network"
                 + "\n ========================="
-                + "\n       MENÚ INICIAL       "
-                + "\n 1. Entrar "
-                + "\n 2. Salir  "
+                + "\n          MAIN MENÚ       "
+                + "\n 1. Enter "
+                + "\n 2. Exit  "
                 + "\n =========================");
         option = write.nextInt();
         switch (option) {
@@ -38,7 +38,7 @@ public class SocialNetwork {
                 logout.logout(systemSocial);
                 break;
             default:
-                System.out.println("Opcion no valida");
+                System.out.println("Invalid Option");
         }
     }
 
@@ -52,26 +52,26 @@ public class SocialNetwork {
         int option1;
         do {
             System.out.println("\n--------------------------"
-                    +"Elige una de las siguientes opciones"
+                    +"         Chose one option           n"
                     + "\n=================================="
-                    + "\n 1. Crear Publicacion"
-                    + "\n 2. Ver seguidores"
-                    + "\n 3. Seguir a un usuario"
-                    + "\n 4. Ver feed"
-                    + "\n 5. Cambiar de usuario"
-                    + "\n 6. siguiendo"
-                    + "\n 7. Reaccionar a una publicacion"
-                    + "\n 8. Salir"
+                    + "\n 1. Create Publication"
+                    + "\n 2. View followers"
+                    + "\n 3. Follow a user"
+                    + "\n 4. See feed"
+                    + "\n 5. Change user"
+                    + "\n 6. Following"
+                    + "\n 7. React to a post"
+                    + "\n 8. Exit"
                     + "\n =================================");
             option1 = write.nextInt();
 
             switch (option1) {
                 case 1:
 
-                    System.out.println("¿Que tipo de Publicacion crearas?"
-                            + "\n 1. Texto"
+                    System.out.println("¿What type of publication will you create?"
+                            + "\n 1. Text"
                             + "\n 2. Video"
-                            + "\n 3. Imagen.");
+                            + "\n 3. Image.");
                     int option2 = write.nextInt();
                     
                     if (option2 == 1) {
@@ -87,7 +87,7 @@ public class SocialNetwork {
                         image.createImage();
                         currentUser.addPublication(image);
                     } else {
-                        System.out.println("Opcion no valida");
+                        System.out.println("Invalid Option");
                     }
                     break;
                     
@@ -118,7 +118,7 @@ public class SocialNetwork {
                     break;
                     
                 case 7:
-                    System.out.println("Ingrese el ID de la publicación a reaccionar:");
+                    System.out.println("Enter the post ID to react:");
                     String idPub = write.next();
                     systemSocial.reactToPublication(idPub);
                     break;
