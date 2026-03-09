@@ -34,12 +34,12 @@ public class Text extends Publication {
     //Metodos propios de la clase
     public void createText(){
         Scanner write = new Scanner(System.in);
-        System.out.println("Escriba una identificacion de su publicacion");
+        System.out.println("Enter an ID of your post");
         identifier=write.nextLine();
-        System.out.println("Escriba fecha de la siguiente manera: "
-                            + "\nDía/Mes/año");
+        System.out.println("Write date as follows: "
+                            + "\nDay/Month/Year");
         date=write.nextLine();
-        System.out.println("Escriba su publiciacion: ");        
+        System.out.println("Write your post: ");        
         inputText=write.nextLine();  
         validateTextLength();
     }
@@ -48,17 +48,17 @@ public class Text extends Publication {
         if(inputText.length()<=500){
             text=inputText;
         }else if(inputText.length()>500){
-            System.out.println("Maximo 500 caracteres");
+            System.out.println("Only 500 characters");
             createText();
         }
     }
     
     @Override
     public String seeContent() {
-        return "Publicación de Texto\n" +
+        return "Text Publishing\n" +
            "ID: " + identifier + "\n" +
-           "Fecha: " + date + "\n" +
-           "Contenido: " + text + "\n" +
-           "Reacciones: " + numberReaction;
+           "Date: " + date + "\n" +
+           "Content: " + text + "\n" +
+           "Reactions: " + numberReaction;
     }  
 }
