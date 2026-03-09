@@ -20,13 +20,13 @@ public class Image extends Publication {
     public void createImage(){
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Escriba una identificacion de su publicacion");
+        System.out.println("Enter an ID for your publication");
         identifier = sc.nextLine();
         
-        System.out.println("Escriba fecha de la siguiente manera: " + "\nDía/Mes/año");
+        System.out.println("Write the date as follows:" + "\nDay/Month/year");
         date = sc.nextLine();
         
-        System.out.println("Ingrese la ruta del archivo de imagen:");
+        System.out.println("Enter the image file path:");
         filePath = sc.next();
 
         try {
@@ -34,19 +34,19 @@ public class Image extends Publication {
             BufferedImage img = ImageIO.read(file);
             width = img.getWidth();
             height = img.getHeight();
-            System.out.println("Resolucion: " + width + " x " + height);
+            System.out.println("Resolution: " + width + " x " + height);
         } catch (IOException e) {
-            System.out.println("Error al cargar la imagen: " + e.getMessage());
+            System.out.println("Error loading image: " + e.getMessage());
         }
     }
 
     @Override
     public String seeContent() {
-        return "Publicación de Imagen\n"
+        return "Publication og Image\n"
                 + "ID: " + identifier + "\n"
-                + "Fecha: " + date + "\n"
-                + "Resolución: " + width + " x " + height + "\n"
-                + "Reacciones: " + numberReaction;
+                + "date: " + date + "\n"
+                + "Resolution: " + width + " x " + height + "\n"
+                + "Reactions: " + numberReaction;
 
     }
 

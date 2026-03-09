@@ -34,10 +34,15 @@ public class Text extends Publication {
     //Metodos propios de la clase
     public void createText(){
         Scanner write = new Scanner(System.in);
-        System.out.println("Enter an ID of your post");
+
+
+
+        System.out.println("Enter an ID for your publication");
+
         identifier=write.nextLine();
-        System.out.println("Write date as follows: "
-                            + "\nDay/Month/Year");
+        System.out.println("Write the date as follows:"
+                            + "\nDay/Month/year");
+
         date=write.nextLine();
         System.out.println("Write your post: ");        
         inputText=write.nextLine();  
@@ -59,9 +64,9 @@ public class Text extends Publication {
     
     @Override
     public String seeContent() {
-        return "Text Publishing\n" +
+        return "Publicatión of Text\n" +
            "ID: " + identifier + "\n" +
-           "Date: " + date + "\n" +
+           "Date: " + date + "\n" +  
            "Content: " + text + "\n" +
            "Reactions: " + numberReaction;
     }  

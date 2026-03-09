@@ -15,17 +15,17 @@ public class Login {
 
         while (loggedUser == null) {
 
-            System.out.println("Ingrese su ID de usuario:");
+            System.out.println("Enter your user ID:");
             String idLogin = write.next();
 
             for (User u : systemSocial.getListUsers()) {
                 if (u.getIdentifier().equals(idLogin)) {
-                    System.out.println("Has iniciado sesión como: " + u.getName());
+                    System.out.println("You are logged in as: " + u.getName());
                     return u;
                 }
             }
             if (loggedUser == null) {
-                System.out.println("Usuario no encontrado. Intente nuevamente");
+                System.out.println("User not found. Please try again.");
             }
         }
 

@@ -13,13 +13,13 @@ public class Video extends Publication {
     public Video(){}
     public void createVideo(){
         Scanner write = new Scanner (System.in);
-        System.out.println("Escriba una identificacion de su publicacion");
+        System.out.println("Enter an ID for your publication");
         identifier=write.nextLine();
         
-        System.out.println("Escriba fecha de la siguiente manera: " + "\nDía/Mes/año");
+        System.out.println("Write the date as follows:" + "\nDay/Month/year");
         date=write.nextLine();
         
-        System.out.println("*Recomendacion: los slash deben ir / " + "\nIngrese la ruta del archivo del video:");
+        System.out.println("*Recommendation: los slash deben ir / " + "\nEnter the video file path:");
         filePath=write.nextLine();
         
         //File representa el archivo del Sistema 
@@ -27,9 +27,9 @@ public class Video extends Publication {
         
         if(file.exists()) {
             duration= (double) getVideoDuration(filePath);
-            System.out.println("Duracion del video: " + duration + " minutos con segundos ");
+            System.out.println("Duration of video: " + duration + " minutes with seconds ");
         }else 
-            System.out.println("No se encontro el archivo :D");
+            System.out.println("The file was not found :D");
     }
     public double getVideoDuration(String filePath){
         try{
@@ -41,16 +41,16 @@ public class Video extends Publication {
             isoFile.close();
             return Math.round((durationVideo / 60.0) * 100.0) / 100.0;
         }catch(Exception e){
-            System.out.println("Error al leer la duración del video");
+            System.out.println("Error reading video duration");
             return 0;
         }
     }
     @Override
     public String seeContent() {
-        return "Publicación de Video\n" +
+        return "Publication of Video\n" +
            "ID: " + identifier + "\n" +
-           "Fecha: " + date + "\n" +
-           "Duración: " + duration + " segundos\n" +
-           "Reacciones: " + numberReaction;
+           "date: " + date + "\n" +
+           "Duration: " + duration + " segundos\n" +
+           "Reacctions: " + numberReaction;
     }
 }
