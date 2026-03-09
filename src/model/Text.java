@@ -56,7 +56,6 @@ public class Text extends Publication {
 
             System.out.println("Only 500 characters");
 
-            System.out.println("Only 500 characteres");
 
             createText();
         }
