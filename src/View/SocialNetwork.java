@@ -3,8 +3,7 @@ package View;
 import controller.*;
 import java.util.Scanner;
 import model.*;
-import controller.*;
-//fggfggnxjudbhsi 
+//8:20 mario cars estuvo aqui <3 f1
 public class SocialNetwork {
     public static void main(String[] args) {
         Scanner write = new Scanner(System.in);
@@ -31,7 +30,7 @@ public class SocialNetwork {
                 User loggedUser = Login.login(systemSocial);
                 if (loggedUser != null) {
                     systemSocial.setCurentUser(loggedUser);
-                    menuPrincipal(systemSocial.getCurentUser(), systemSocial, logout);
+                    mainMenu(systemSocial.getCurentUser(), systemSocial, logout);
                 }
                 break;
             case 2:
@@ -46,7 +45,7 @@ public class SocialNetwork {
    
     
     
-    public static void menuPrincipal(User currentUser, SystemSocial systemSocial, Logout logout) {
+    public static void mainMenu(User currentUser, SystemSocial systemSocial, Logout logout) {
 
         Scanner write = new Scanner(System.in);
         int option1;
@@ -108,7 +107,7 @@ public class SocialNetwork {
                     if (neUser != null) {
                         systemSocial.setCurentUser(neUser);
                         // Aquí volvemos a mostrar el menú con el nuevo usuario
-                        menuPrincipal(systemSocial.getCurentUser(), systemSocial, logout);
+                        mainMenu(systemSocial.getCurentUser(), systemSocial, logout);
                         return; // importante para que no se quede en el bucle anterior
                     }
                     break;
