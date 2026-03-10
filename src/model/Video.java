@@ -7,6 +7,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 import javax.imageio.ImageIO;
+
+
 public class Video extends Publication {
     private double duration;
     private String filePath;
@@ -19,7 +21,7 @@ public class Video extends Publication {
         System.out.println("Write the date as follows:" + "\nDay/Month/year");
         date=write.nextLine();
         
-        System.out.println("*Recommendation: los slash deben ir / " + "\nEnter the video file path:");
+        System.out.println("Recommendation: slash / " + "\nEnter the video file path:");
         filePath=write.nextLine();
         
         //File representa el archivo del Sistema 
@@ -47,10 +49,10 @@ public class Video extends Publication {
     }
     @Override
     public String seeContent() {
-        return "Publication of Video\n" +
-           "ID: " + identifier + "\n" +
-           "date: " + date + "\n" +
-           "Duration: " + duration + " segundos\n" +
-           "Reacctions: " + numberReaction;
+        return "Publication of Video\n"
+       + "ID: " + identifier + "\n"
+       + "Date: " + date + "\n"
+       + "Duration: " + duration + " segundos\n"
+       + "Reactions: " + numberReaction;
     }
 }

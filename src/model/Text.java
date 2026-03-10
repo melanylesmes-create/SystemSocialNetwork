@@ -39,15 +39,15 @@ public class Text extends Publication {
 
         System.out.println("Enter an ID for your publication");
 
-        identifier=write.nextLine();
-        System.out.println("Write the date as follows:"
-                            + "\nDay/Month/year");
+        identifier = write.nextLine();
+        System.out.println("Write the date as follows:\\nDay/Month/year");
 
-        date=write.nextLine();
-        System.out.println("Write your post: ");        
-        inputText=write.nextLine();  
+        date = write.nextLine();
+        System.out.println("Write your post:");        
+        inputText = write.nextLine();
+
         validateTextLength();
-    }
+            }
     
     public void validateTextLength(){
         if(inputText.length()<=500){
@@ -63,10 +63,11 @@ public class Text extends Publication {
     
     @Override
     public String seeContent() {
-        return "Publicatión of Text\n" +
-           "ID: " + identifier + "\n" +
-           "Date: " + date + "\n" +  
-           "Content: " + text + "\n" +
-           "Reactions: " + numberReaction;
+        return "Publicatión of Text\n"
+       + "ID: " + identifier + "\n"
+       + "Date: " + date + "\n"
+       + "Content: " + text + "\n"
+       + "Reactions: " + numberReaction;
     }  
 }
+

@@ -83,9 +83,9 @@ public class User {
 
     // Ver seguidores
     public void seeFollowers() {
-        System.out.println("Tus seguidores:");
+        System.out.println("Your followers:");
         if (listFollowers.isEmpty()) {
-            System.out.println("No tienes seguidores.");
+            System.out.println("You don't have followers");
         } else {
             for (User u : listFollowers) {
                 System.out.println("- " + u.getName());
@@ -95,9 +95,9 @@ public class User {
 
     // Ver seguidos
     public void seeFollowing() {
-        System.out.println("Usuarios que sigues:");
+        System.out.println("Users you follow:");
         if (listFollowing.isEmpty()) {
-            System.out.println("No sigues a nadie.");
+            System.out.println("You don't follow anyone");
         } else {
             for (User u : listFollowing) {
                 System.out.println("- " + u.getName());
@@ -140,6 +140,7 @@ public class User {
     }
     @Override
     public String toString(){
-        return "\nNombre: " + name + "\nIdentificacion: " + identifier;
+        return "\nName: " + name
+       + "\nIdentifier: " + identifier;
     }
 }

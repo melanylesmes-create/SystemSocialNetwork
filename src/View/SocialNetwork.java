@@ -3,8 +3,7 @@ package View;
 import controller.*;
 import java.util.Scanner;
 import model.*;
-//8:20 mario cars estuvo aqui <3 f1
-//yuliana estubo aqui :(
+
 public class SocialNetwork {
     public static void main(String[] args) {
         Scanner write = new Scanner(System.in);
@@ -41,18 +40,13 @@ public class SocialNetwork {
                 System.out.println("Invalid Option");
         }
     }
-
-    
-   
-    
     
     public static void mainMenu(User currentUser, SystemSocial systemSocial, Logout logout) {
 
         Scanner write = new Scanner(System.in);
         int option1;
         do {
-            System.out.println("\n--------------------------"
-                    +"         Chose one option           n"
+            System.out.println("\nChoose one of the options: "         
                     + "\n==================================" 
                     + "\n 1. Create Publication"
                     + "\n 2. View followers"
