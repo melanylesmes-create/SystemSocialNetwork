@@ -4,6 +4,7 @@ import controller.*;
 import java.util.Scanner;
 import model.*;
 //8:20 mario cars estuvo aqui <3 f1
+//yuliana estubo aqui :(
 public class SocialNetwork {
     public static void main(String[] args) {
         Scanner write = new Scanner(System.in);
